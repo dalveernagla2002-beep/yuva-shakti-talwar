@@ -40,6 +40,16 @@
     .btn-grad:hover {
       opacity: 0.9;
     }
+    nav a {
+      display: inline-block;
+      padding: 8px 12px;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    nav a:hover {
+      background: rgba(255,255,255,0.1);
+    }
   </style>
 </head>
 <body>
@@ -51,15 +61,15 @@
     <p style="margin-top: 5px; font-size: 14px; opacity: 0.9;">"एकता, विकास और युवाओं की आवाज़"</p>
   </header>
 
-  <!-- 2. Sticky Navigation Menu -->
-  <nav style="position: sticky; top: 0; z-index: 999; background: #1a1a1a; padding: 12px; text-align: center; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-    <a href="#about" style="color: white; padding: 6px 10px; font-weight: bold;">ℹ️ परिचय</a>
-    <a href="#notice-section" style="color: white; padding: 6px 10px; font-weight: bold;">📢 सूचनाएं</a>
-    <a href="#works" style="color: white; padding: 6px 10px; font-weight: bold;">🚜 कार्य & संकल्प</a>
-    <a href="#login-section" style="color: #ffad10; padding: 6px 10px; font-weight: bold;">🔐 लॉग इन</a>
-    <a href="#members" style="color: white; padding: 6px 10px; font-weight: bold;">👥 सदस्य (<span id="total-members-count">1</span>)</a>
-    <a href="#complaint" style="color: white; padding: 6px 10px; font-weight: bold;">📝 शिकायत दर्ज करें</a>
-    <a href="#profile" style="color: #ff1053; padding: 6px 10px; font-weight: bold;">👤 प्रोफाइल</a>
+  <!-- 2. Fixed Navigation Menu -->
+  <nav style="position: relative; z-index: 9999; background: #1a1a1a; padding: 12px; text-align: center; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <a href="#about" style="color: white;">ℹ️ परिचय</a>
+    <a href="#notice-section" style="color: white;">📢 सूचनाएं</a>
+    <a href="#works" style="color: white;">🚜 कार्य & संकल्प</a>
+    <a href="#login-section" style="color: #ffad10;">🔐 लॉग इन</a>
+    <a href="#members" style="color: white;">👥 सदस्य (<span id="total-members-count">1</span>)</a>
+    <a href="#complaint" style="color: white;">📝 शिकायत दर्ज करें</a>
+    <a href="#profile" style="color: #ff1053;">👤 प्रोफाइल</a>
   </nav>
 
   <!-- 3. Notice Ticker -->
