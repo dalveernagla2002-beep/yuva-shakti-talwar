@@ -238,8 +238,148 @@
     </div>
 
     <footer>
+        <!-- Google Sheet Updates Section -->
+<section style="max-width: 900px; margin: 30px auto; padding: 15px; text-align: center;">
+  <h2 style="color: #ff1053; margin-bottom: 15px; font-family: Arial, sans-serif;">
+    📢 संगठन के कार्य एवं गतिविधियां (Live Updates)
+  </h2>
+  
+  <div style="overflow-x: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 10px;">
+    <!-- नीचे iframe के src में अपनी Google Sheet का Embed लिंक पेस्ट करें -->
+    <iframe 
+      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ.../pubhtml?widget=true&amp;headers=false" 
+      width="100%" 
+      height="400" 
+      frameborder="0" 
+      style="border:0; border-radius: 10px;">
+    </iframe>
+  </div>
+</section>
         © 2026 युवा शक्ति संगठन - ग्राम पंचायत तलवार (डिबाई, बुलंदशहर)
     </footer>
+<!-- 1. HTML और CSS भाग -->
+<div class="login-container">
+  <div class="form-box">
+    <!-- Tab Buttons -->
+    <div class="button-box">
+      <div id="btn"></div>
+      <button type="button" class="toggle-btn" onclick="showLogin()">लॉग इन</button>
+      <button type="button" class="toggle-btn" onclick="showRegister()">रजिस्ट्रेशन</button>
+    </div>
 
+    <!-- Login Form -->
+    <form id="loginForm" class="input-group">
+      <input type="text" class="input-field" placeholder="मोबाइल नंबर / ईमेल" required>
+      <input type="password" class="input-field" placeholder="पासवर्ड" required>
+      <button type="submit" class="submit-btn">लॉग इन करें</button>
+    </form>
+
+    <!-- Register Form -->
+    <form id="registerForm" class="input-group">
+      <input type="text" class="input-field" placeholder="पूरा नाम" required>
+      <input type="tel" class="input-field" placeholder="मोबाइल नंबर" required>
+      <input type="text" class="input-field" placeholder="गांव / शहर" required>
+      <input type="password" class="input-field" placeholder="पासवर्ड बनाएं" required>
+      <button type="submit" class="submit-btn">सदस्य बनें</button>
+    </form>
+  </div>
+</div>
+
+<style>
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10px;
+  }
+  .form-box {
+    width: 340px;
+    height: 420px;
+    position: relative;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    overflow: hidden;
+  }
+  .button-box {
+    width: 220px;
+    margin: 10px auto 30px auto;
+    position: relative;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.1);
+    border-radius: 30px;
+  }
+  .toggle-btn {
+    padding: 10px 25px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    font-weight: bold;
+  }
+  #btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #ff1053, #ffad10);
+    border-radius: 30px;
+    transition: .5s;
+  }
+  .input-group {
+    top: 100px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+  }
+  .input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 8px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+  }
+  .submit-btn {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    background: linear-gradient(to right, #ff1053, #ffad10);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  #loginForm { left: 30px; }
+  #registerForm { left: 400px; }
+</style>
+
+<!-- 2. JavaScript भाग -->
+<script>
+  var loginF = document.getElementById("loginForm");
+  var registerF = document.getElementById("registerForm");
+  var btn = document.getElementById("btn");
+
+  function showRegister() {
+    loginF.style.left = "-400px";
+    registerF.style.left = "30px";
+    btn.style.left = "110px";
+  }
+
+  function showLogin() {
+    loginF.style.left = "30px";
+    registerF.style.left = "400px";
+    btn.style.left = "0px";
+  }
+</script>
 </body>
 </html>
