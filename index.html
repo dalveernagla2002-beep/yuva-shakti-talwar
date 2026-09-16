@@ -1,472 +1,242 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>युवा शक्ति संगठन | ग्राम पंचायत तलवार</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f4f7f6;
-            color: #333;
-        }
-
-        /* Header Layout */
-        header {
-            background: linear-gradient(135deg, #ff9933, #ffffff, #128807);
-            padding: 30px 20px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
-
-        .logo {
-            width: 110px;
-            height: 110px;
-            background-color: #0d233a;
-            border-radius: 50%;
-            margin: 0 auto 15px auto;
-            border: 4px solid #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ff9933;
-            font-size: 22px;
-            font-weight: bold;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-
-        h1 {
-            color: #0b2545;
-            font-size: 28px;
-            margin-bottom: 5px;
-        }
-
-        .tagline {
-            font-size: 16px;
-            font-weight: 600;
-            color: #134074;
-            margin-bottom: 10px;
-        }
-
-        .motto {
-            font-size: 15px;
-            color: #222;
-            background: rgba(255, 255, 255, 0.85);
-            display: inline-block;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-weight: 500;
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 15px;
-        }
-
-        .card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        .card h2 {
-            color: #134074;
-            border-bottom: 2px solid #ff9933;
-            padding-bottom: 8px;
-            margin-bottom: 15px;
-            font-size: 20px;
-        }
-
-        .agenda-list {
-            list-style: none;
-        }
-
-        .agenda-list li {
-            padding: 10px 0;
-            border-bottom: 1px dashed #ddd;
-            display: flex;
-            align-items: center;
-        }
-
-        .agenda-list li:last-child {
-            border-bottom: none;
-        }
-
-        .agenda-list span {
-            margin-right: 10px;
-            font-size: 18px;
-        }
-
-        /* Action Buttons */
-        .btn-container {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            align-items: center;
-            margin: 25px 0;
-        }
-
-        .btn {
-            width: 100%;
-            max-width: 320px;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 30px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            transition: 0.3s;
-        }
-
-        .btn-call {
-            background-color: #007bff;
-            color: #fff;
-        }
-
-        .btn-call:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
-        }
-
-        .btn-whatsapp {
-            background-color: #25D366;
-            color: #fff;
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #1ebd56;
-            transform: translateY(-2px);
-        }
-
-        /* Candidate Details */
-        .candidate-info {
-            text-align: center;
-            background: #0b2545;
-            color: #fff;
-            padding: 20px;
-            border-radius: 12px;
-        }
-
-        .candidate-info h3 {
-            color: #ff9933;
-            margin-bottom: 5px;
-            font-size: 22px;
-        }
-
-        .phone-display {
-            font-size: 18px;
-            font-weight: bold;
-            color: #25D366;
-            margin-top: 8px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            font-size: 13px;
-            color: #666;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>युवा शक्ति संगठन - ग्राम पंचायत तलवार</title>
+  
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 25px auto;
+      max-width: 850px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    .btn-grad {
+      background: linear-gradient(to right, #ff1053, #ffad10);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn-grad:hover {
+      opacity: 0.9;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <div class="logo">
-            युवा शक्ति
-        </div>
-        <h1>युवा शक्ति संगठन 🇮🇳</h1>
-        <p class="tagline">💪 एकता में शक्ति</p>
-        <p class="motto">🤝 सबका साथ, सबका सम्मान | एकता • सहयोग • विकास</p>
-    </header>
+  <!-- 1. Top Header Banner -->
+  <header style="background: linear-gradient(135deg, #ff1053, #ffad10); color: white; padding: 45px 20px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+    <h1 style="margin: 0; font-size: 36px; text-shadow: 1px 1px 3px rgba(0,0,0,0.2);">🚩 युवा शक्ति संगठन</h1>
+    <p style="margin: 10px 0 0 0; font-size: 20px; font-weight: 500;">ग्राम पंचायत तलवार (डिबाई, बुलंदशहर)</p>
+    <p style="margin-top: 5px; font-size: 14px; opacity: 0.9;">"एकता, विकास और युवाओं की आवाज़"</p>
+  </header>
 
-    <!-- Main Content Container -->
-    <div class="container">
+  <!-- 2. Sticky Navigation Menu -->
+  <nav style="position: sticky; top: 0; z-index: 999; background: #1a1a1a; padding: 12px; text-align: center; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <a href="#about" style="color: white; padding: 6px 10px; font-weight: bold;">ℹ️ परिचय</a>
+    <a href="#notice-section" style="color: white; padding: 6px 10px; font-weight: bold;">📢 सूचनाएं</a>
+    <a href="#works" style="color: white; padding: 6px 10px; font-weight: bold;">🚜 कार्य & संकल्प</a>
+    <a href="#login-section" style="color: #ffad10; padding: 6px 10px; font-weight: bold;">🔐 लॉग इन</a>
+    <a href="#members" style="color: white; padding: 6px 10px; font-weight: bold;">👥 सदस्य (<span id="total-members-count">1</span>)</a>
+    <a href="#complaint" style="color: white; padding: 6px 10px; font-weight: bold;">📝 शिकायत दर्ज करें</a>
+    <a href="#profile" style="color: #ff1053; padding: 6px 10px; font-weight: bold;">👤 प्रोफाइल</a>
+  </nav>
 
-        <!-- Vision / Mission -->
-        <div class="card">
-            <h2>🎯 हमारा मुख्य उद्देश्य</h2>
-            <p style="line-height: 1.6;">
-                ग्राम पंचायत <strong>तलवार (नगला तलवार, उदयपुर)</strong> के सभी युवाओं को एकजुट करके गाँव में शिक्षा, स्वास्थ्य, खेल और डिजिटल सुविधाओं को बढ़ावा देना।
-            </p>
-        </div>
-
-        <!-- Development Agenda -->
-        <div class="card">
-            <h2>🏥 स्वास्थ्य एवं विकास संकल्प</h2>
-            <ul class="agenda-list">
-                <li><span>🏥</span> <strong>स्वास्थ्य केंद्र (PHC):</strong> गाँव में प्राथमिक स्वास्थ्य केंद्र/डिस्पेंसरी की स्थापना।</li>
-                <li><span>🚑</span> <strong>एम्बुलेंस सुविधा:</strong> आपातकालीन स्थिति के लिए 24x7 मुफ़्त सेवा।</li>
-                <li><span>📚</span> <strong>शिक्षा व लाइब्रेरी:</strong> युवाओं के लिए डिजिटल लाइब्रेरी व कंप्यूटर प्रशिक्षण केंद्र।</li>
-                <li><span>🛣️</span> <strong>पक्की सड़कें व स्वच्छता:</strong> जलभराव से मुक्ति और स्वच्छ गाँव।</li>
-                <li><span>📋</span> <strong>पारदर्शिता:</strong> पंचायत के हर फंड का पारदर्शी हिसाब।</li>
-            </ul>
-        </div>
-
-        <!-- Action Buttons -->
-        <div class="btn-container">
-            <!-- Direct Call Button -->
-            <a href="tel:+919027717660" class="btn btn-call">
-                📞 सीधा कॉल करें
-            </a>
-
-            <!-- WhatsApp Group Button -->
-            <a href="https://chat.whatsapp.com/" class="btn btn-whatsapp" target="_blank">
-                💬 व्हाट्सएप ग्रुप से जुड़ें
-            </a>
-        </div>
-
-        <!-- Candidate Section -->
-        <div class="candidate-info">
-            <h3>दलवीर सिंह</h3>
-            <p>(भावी ग्राम प्रधान प्रत्याशी - ग्राम पंचायत तलवार)</p>
-            <p class="phone-display">📱 संपर्क: +91-9027717660</p>
-            <p style="margin-top: 8px; font-size: 14px; color: #ddd;">"युवा जागेगा, तो भारत और गाँव आगे बढ़ेगा!"</p>
-        </div>
-
-    </div>
-
-    <footer>
-        <!-- Google Sheet Updates Section -->
-<section style="max-width: 900px; margin: 30px auto; padding: 15px; text-align: center;">
-  <h2 style="color: #ff1053; margin-bottom: 15px; font-family: Arial, sans-serif;">
-    📢 संगठन के कार्य एवं गतिविधियां (Live Updates)
-  </h2>
-  
-  <div style="overflow-x: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 10px;">
-    <!-- नीचे iframe के src में अपनी Google Sheet का Embed लिंक पेस्ट करें -->
-    <iframe 
-      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ.../pubhtml?widget=true&amp;headers=false" 
-      width="100%" 
-      height="400" 
-      frameborder="0" 
-      style="border:0; border-radius: 10px;">
-    </iframe>
+  <!-- 3. Notice Ticker -->
+  <div id="notice-section" style="background: #ff1053; color: white; padding: 12px; font-weight: bold; overflow: hidden; white-space: nowrap;">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      📢 सूचना: युवा शक्ति संगठन ग्राम पंचायत तलवार में आपका स्वागत है! | 🌾 राशन वितरण, जल निकासी एवं सरकारी योजनाओं की जानकारी के लिए पोर्टल से जुड़े रहें। | 📞 हेल्पलाइन: +91 90277 17660
+    </marquee>
   </div>
-</section>
-        © 2026 युवा शक्ति संगठन - ग्राम पंचायत तलवार (डिबाई, बुलंदशहर)
-        
-    </footer>
-    <!-- 1. Digital Notice Board (Running Ticker) -->
-<div style="background: #ff1053; color: white; padding: 10px; font-weight: bold; overflow: hidden; white-space: nowrap; box-shadow: 0 2px 5px rgba(0,0,0,0.2); margin-top: 20px;">
-  <marquee behavior="scroll" direction="left" scrollamount="6">
-    📢 सूचना: युवा शक्ति संगठन ग्राम पंचायत तलवार में आपका स्वागत है! | 🌾 राशन वितरण की जानकारी के लिए सूचना बोर्ड देखें | 📚 युवाओं के लिए डिजिटल लाइब्रेरी की सुविधा जल्द शुरू होगी।
-  </marquee>
-</div>
 
-<!-- 2. Photo Gallery Section -->
-<section id="gallery" style="max-width: 800px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-  <h2 style="color: #ff1053; border-bottom: 2px solid #ffad10; padding-bottom: 5px; margin-bottom: 15px;">🖼️ संगठन की कार्य झलकियाँ (Photo Gallery)</h2>
-  
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
-    <div style="background: #f4f6f9; padding: 10px; border-radius: 8px; text-align: center;">
-      <div style="background: #e2e8f0; height: 100px; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 30px;">📸</div>
-      <p style="margin-top: 8px; font-size: 14px; font-weight: bold;">बैठक व विचार विमर्श</p>
+  <!-- 4. Main Candidate Banner -->
+  <section id="about" class="card" style="text-align: center;">
+    <div style="background: #fff5f5; padding: 25px; border-radius: 10px; border: 2px dashed #ff1053;">
+      <h2 style="color: #ff1053; margin: 0 0 10px 0; font-size: 28px;">दलवीर सिंह</h2>
+      <p style="font-size: 20px; font-weight: bold; color: #333; margin: 5px 0;">भावी ग्राम प्रधान प्रत्याशी - ग्राम पंचायत तलवार</p>
+      <p style="color: #555; margin: 5px 0; font-size: 16px;">📱 संपर्क सूत्र: <strong>+91 90277 17660</strong></p>
+      <hr style="border: 0; border-top: 1px solid #ffd1d1; margin: 15px 0;">
+      <p style="color: #444; font-size: 15px; font-style: italic;">
+        "हमारा लक्ष्य - गाँव का सर्वांगीण विकास, साफ-सफाई, शुद्ध पेयजल, युवाओं के लिए खेल मैदान और हर पात्र व्यक्ति तक सरकारी योजनाओं को पहुँचाना।"
+      </p>
     </div>
-    <div style="background: #f4f6f9; padding: 10px; border-radius: 8px; text-align: center;">
-      <div style="background: #e2e8f0; height: 100px; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 30px;">🧹</div>
-      <p style="margin-top: 8px; font-size: 14px; font-weight: bold;">ग्राम स्वच्छता अभियान</p>
+  </section>
+
+  <!-- 5. Development Agenda / Vision -->
+  <section id="works" class="card">
+    <h2 style="color: #ff1053; border-bottom: 2px solid #ffad10; padding-bottom: 8px; margin-top: 0;">🎯 हमारी प्राथमिकतियाँ एवं विकास संकल्प</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-top: 15px;">
+      <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #ff1053;">
+        <h4 style="margin: 0 0 5px 0; color: #ff1053;">💧 शिक्षा एवं स्वास्थ्य</h4>
+        <small style="color: #666;">सरकारी विद्यालयों का सुंदरीकरण एवं गाँव में स्वास्थ्य सुविधाओं की आसान पहुँच।</small>
+      </div>
+      <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #ffad10;">
+        <h4 style="margin: 0 0 5px 0; color: #ffad10;">🛠️ जल निकासी व रास्ते</h4>
+        <small style="color: #666;">पक्की नालियों का निर्माण, खड़ंजा व सीसी रोड व्यवस्था दुरुस्त करना।</small>
+      </div>
+      <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+        <h4 style="margin: 0 0 5px 0; color: #10b981;">📜 सरकारी योजनाएं</h4>
+        <small style="color: #666;">आवास योजना, पेंशन, राशन कार्ड का लाभ बिना किसी बिचौलिए के सीधे दिलाना।</small>
+      </div>
+      <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #007bff;">
+        <h4 style="margin: 0 0 5px 0; color: #007bff;">⚽ युवा एवं खेल</h4>
+        <small style="color: #666;">युवाओं के खेलकूद एवं पुलिस/सेना भर्ती की तैयारी हेतु मैदान की व्यवस्था करना।</small>
+      </div>
     </div>
-    <div style="background: #f4f6f9; padding: 10px; border-radius: 8px; text-align: center;">
-      <div style="background: #e2e8f0; height: 100px; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 30px;">🏆</div>
-      <p style="margin-top: 8px; font-size: 14px; font-weight: bold;">खेलकूद प्रतियोगिता</p>
+  </section>
+
+  <!-- 6. Login & Registration Section -->
+  <section id="login-section" class="card" style="max-width: 450px;">
+    <h3 style="text-align: center; color: #222; margin-top: 0;">पोर्टल प्रवेश / नया खाता</h3>
+    <div class="form-box">
+      <div class="button-box" style="display: flex; justify-content: space-around; margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px;">
+        <button type="button" onclick="showLogin()" style="background: none; border: none; font-weight: bold; color: #ff1053; cursor: pointer; font-size: 16px;">लॉग इन</button>
+        <button type="button" onclick="showRegister()" style="background: none; border: none; font-weight: bold; color: #555; cursor: pointer; font-size: 16px;">रजिस्ट्रेशन</button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm" onsubmit="event.preventDefault(); alert('लॉग इन सफल हुआ!');">
+        <input type="text" placeholder="मोबाइल नंबर / ईमेल" required style="width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
+        <input type="password" placeholder="पासवर्ड" required style="width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
+        <button type="submit" class="btn-grad" style="width: 100%;">लॉग इन करें</button>
+      </form>
+
+      <!-- Register Form -->
+      <form id="registerForm" style="display: none;" onsubmit="event.preventDefault(); alert('रजिस्ट्रेशन सफल हुआ!');">
+        <input type="text" placeholder="पूरा नाम" required style="width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
+        <input type="tel" placeholder="मोबाइल नंबर" required style="width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
+        <input type="password" placeholder="नया पासवर्ड बनाएं" required style="width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
+        <button type="submit" class="btn-grad" style="width: 100%;">रजिस्टर करें</button>
+      </form>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 3. Government Schemes Guide Section -->
-<section id="schemes" style="max-width: 800px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-  <h2 style="color: #ff1053; border-bottom: 2px solid #ffad10; padding-bottom: 5px; margin-bottom: 15px;">📜 महत्वपूर्ण सरकारी योजनाएँ व जानकारी</h2>
-  
-  <ul style="list-style-type: none; padding: 0;">
-    <li style="padding: 10px; background: #f9fafb; border-left: 4px solid #ff1053; margin-bottom: 10px; border-radius: 4px;">
-      <strong>🎓 छात्रवृत्ति (Scholarship):</strong> कक्षा 9वीं से 12वीं और स्नातक के छात्र अपना फ़ॉर्म समय पर भरें।
-    </li>
-    <li style="padding: 10px; background: #f9fafb; border-left: 4px solid #ffad10; margin-bottom: 10px; border-radius: 4px;">
-      <strong>🌾 पीएम किसान सम्मान निधि:</strong> अपनी e-KYC स्थिति जाँचने के लिए नजदीकी जन सेवा केंद्र संपर्क करें।
-    </li>
-    <li style="padding: 10px; background: #f9fafb; border-left: 4px solid #10b981; margin-bottom: 10px; border-radius: 4px;">
-      <strong>🏠 आवास व राशन कार्ड:</strong> नई सूची में नाम देखने के लिए ऑनलाइन पोर्टल का उपयोग करें।
-    </li>
-  </ul>
-</section>
-
-    <!-- Navigation Menu Bar -->
-<nav style="background: #222; padding: 10px; text-align: center; display: flex; justify-content: space-around; flex-wrap: wrap; margin-bottom: 20px;">
-  <a href="#home" style="color: white; text-decoration: none; padding: 5px 10px; font-weight: bold;">🏠 मुख्य पृष्ठ</a>
-  <a href="#members" style="color: white; text-decoration: none; padding: 5px 10px; font-weight: bold;">👥 कुल सदस्य (<span id="total-members-count">1</span>)</a>
-  <a href="#complaint" style="color: white; text-decoration: none; padding: 5px 10px; font-weight: bold;">📝 शिकायत / सुझाव</a>
-  <a href="#profile" style="color: white; text-decoration: none; padding: 5px 10px; font-weight: bold;">👤 प्रोफाइल व सेटिंग</a>
-</nav>
-
-<!-- Total Members Section -->
-<section id="members" style="max-width: 800px; margin: 20px auto; padding: 15px; background: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-  <h2 style="color: #ff1053; border-bottom: 2px solid #ffad10; padding-bottom: 5px; margin-bottom: 10px;">👥 संगठन के पंजीकृत सदस्य</h2>
-  <p style="font-size: 16px; margin-bottom: 10px;">कुल जोड़े गए सदस्य: <strong style="color: #ff1053; font-size: 20px;">1</strong></p>
-  <div style="background: #f4f6f9; padding: 10px 15px; border-radius: 8px; border-left: 4px solid #ffad10;">
-    <strong>दलवीर सिंह</strong> (भावी ग्राम प्रधान प्रत्याशी)<br>
-    <small>📍 नगला तलवार</small>
-  </div>
-</section>
-
-<!-- Complaint & Feedback Section -->
-<section id="complaint" style="max-width: 800px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-  <h2 style="color: #ff1053; border-bottom: 2px solid #ffad10; padding-bottom: 5px; margin-bottom: 15px;">📝 समस्या दर्ज करें / सुझाव दें</h2>
-  <form id="complaintForm" onsubmit="alert('आपकी शिकायत/सुझाव दर्ज कर लिया गया है!'); return false;">
-    <input type="text" placeholder="आपका नाम" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;" required>
-    <input type="tel" placeholder="मोबाइल नंबर" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;" required>
-    <textarea placeholder="अपनी समस्या या सुझाव यहाँ विस्तार से लिखें..." rows="4" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;" required></textarea>
-    <button type="submit" style="background: linear-gradient(to right, #ff1053, #ffad10); color: white; border: none; padding: 10px 20px; border-radius: 25px; font-weight: bold; cursor: pointer;">शिकायत दर्ज करें</button>
-  </form>
-</section>
-
-<!-- User Profile Section -->
-<section id="profile" style="max-width: 800px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-  <h2 style="color: #ff1053; border-bottom: 2px solid #ffad10; padding-bottom: 5px; margin-bottom: 15px;">⚙️ प्रोफाइल व खाता सेटिंग</h2>
-  <div style="display: flex; align-items: center; gap: 15px;">
-    <div style="width: 50px; height: 50px; border-radius: 50%; background: #ffad10; display: flex; align-items: center; justify-content: center; font-size: 20px; color: white; font-weight: bold;">
-      👤
+  <!-- 7. Registered Members List Section -->
+  <section id="members" class="card">
+    <h2 style="color: #ff1053; border-bottom: 2px solid #ffad10; padding-bottom: 8px; margin-top: 0;">👥 संगठन के पंजीकृत सदस्य</h2>
+    <p style="font-size: 16px;">कुल जोड़े गए सदस्य: <strong style="color: #ff1053; font-size: 20px;">1</strong></p>
+    <div style="background: #f4f6f9; padding: 15px; border-radius: 8px; border-left: 5px solid #ffad10; margin-top: 10px;">
+      <h3 style="margin: 0 0 5px 0; color: #222;">दलवीर सिंह</h3>
+      <p style="margin: 0; color: #ff1053; font-weight: bold; font-size: 14px;">भावी ग्राम प्रधान प्रत्याशी</p>
+      <small style="color: #666;">📍 ग्राम पंचायत तलवार (डिबाई, बुलंदशहर)</small>
     </div>
-    <div>
-      <h3>सदस्य प्रोफाइल</h3>
-      <p style="color: #666; font-size: 14px;">युवा शक्ति संगठन तलवार</p>
-    </div>
-  </div>
-</section>
-<!-- 1. HTML और CSS भाग -->
-<div class="login-container">
-  <div class="form-box">
-    <!-- Tab Buttons -->
-    <div class="button-box">
-      <div id="btn"></div>
-      <button type="button" class="toggle-btn" onclick="showLogin()">लॉग इन</button>
-      <button type="button" class="toggle-btn" onclick="showRegister()">रजिस्ट्रेशन</button>
-    </div>
+  </section>
 
-    <!-- Login Form -->
-    <form id="loginForm" class="input-group">
-      <input type="text" class="input-field" placeholder="मोबाइल नंबर / ईमेल" required>
-      <input type="password" class="input-field" placeholder="पासवर्ड" required>
-      <button type="submit" class="submit-btn">लॉग इन करें</button>
+  <!-- 8. Complaint / Suggestion Form -->
+  <section id="complaint" class="card">
+    <h2 style="color: #ff1053; border-bottom: 2px solid #ffad10; padding-bottom: 8px; margin-top: 0;">📝 समस्या दर्ज करें / सुझाव दें</h2>
+    <p style="color: #666; font-size: 14px;">गाँव की समस्या या अपना सुझाव सीधे प्रधान प्रत्याशी तक पहुंचाएं:</p>
+    
+    <form id="complaintForm" onsubmit="submitComplaint(event)">
+      <input type="text" id="cName" placeholder="आपका पूरा नाम" style="width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;" required>
+      <input type="tel" id="cPhone" placeholder="मोबाइल नंबर" style="width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;" required>
+      <textarea id="cMessage" placeholder="अपनी समस्या या सुझाव यहाँ विस्तार से लिखें..." rows="4" style="width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;" required></textarea>
+      <button type="submit" class="btn-grad">शिकायत दर्ज करें</button>
     </form>
 
-    <!-- Register Form -->
-    <form id="registerForm" class="input-group">
-      <input type="text" class="input-field" placeholder="पूरा नाम" required>
-      <input type="tel" class="input-field" placeholder="मोबाइल नंबर" required>
-      <input type="text" class="input-field" placeholder="गांव / शहर" required>
-      <input type="password" class="input-field" placeholder="पासवर्ड बनाएं" required>
-      <button type="submit" class="submit-btn">सदस्य बनें</button>
-    </form>
-  </div>
-</div>
+    <div id="complaintSuccess" style="display:none; margin-top: 15px; background: #e6fffa; border-left: 5px solid #10b981; padding: 15px; border-radius: 6px;">
+      <h4 style="color: #065f46; margin: 0 0 5px 0;">✅ आपकी शिकायत सफलतापूर्वक दर्ज कर ली गई है!</h4>
+      <p id="submittedDetails" style="margin: 0; color: #047857; font-size: 14px;"></p>
+    </div>
+  </section>
 
-<style>
-  .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 10px;
-  }
-  .form-box {
-    width: 340px;
-    height: 420px;
-    position: relative;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    overflow: hidden;
-  }
-  .button-box {
-    width: 220px;
-    margin: 10px auto 30px auto;
-    position: relative;
-    box-shadow: 0 0 10px 1px rgba(0,0,0,0.1);
-    border-radius: 30px;
-  }
-  .toggle-btn {
-    padding: 10px 25px;
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-    outline: none;
-    position: relative;
-    font-weight: bold;
-  }
-  #btn {
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 110px;
-    height: 100%;
-    background: linear-gradient(to right, #ff1053, #ffad10);
-    border-radius: 30px;
-    transition: .5s;
-  }
-  .input-group {
-    top: 100px;
-    position: absolute;
-    width: 280px;
-    transition: .5s;
-  }
-  .input-field {
-    width: 100%;
-    padding: 10px 0;
-    margin: 8px 0;
-    border-left: 0;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 1px solid #999;
-    outline: none;
-    background: transparent;
-  }
-  .submit-btn {
-    width: 85%;
-    padding: 10px 30px;
-    cursor: pointer;
-    display: block;
-    margin: 20px auto;
-    background: linear-gradient(to right, #ff1053, #ffad10);
-    border: 0;
-    outline: none;
-    border-radius: 30px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  #loginForm { left: 30px; }
-  #registerForm { left: 400px; }
-</style>
+  <!-- 9. User Profile Section with Photo Upload -->
+  <section id="profile" class="card">
+    <h2 style="color: #ff1053; border-bottom: 2px solid #ffad10; padding-bottom: 8px; margin-bottom: 20px; margin-top: 0;">👤 सदस्य प्रोफाइल विवरण</h2>
+    
+    <div style="display: flex; align-items: center; gap: 20px; background: #f9fafb; padding: 15px; border-radius: 10px; border: 1px solid #eee; flex-wrap: wrap;">
+      
+      <!-- Profile Image Block -->
+      <div style="text-align: center;">
+        <img id="profileImg" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile Photo" style="width: 95px; height: 95px; border-radius: 50%; object-fit: cover; border: 3px solid #ff1053; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+        <br>
+        <label for="imgUpload" style="font-size: 12px; color: #ff1053; cursor: pointer; text-decoration: underline; font-weight: bold; margin-top: 6px; display: inline-block;">📷 फोटो बदलें</label>
+        <input type="file" id="imgUpload" accept="image/*" onchange="previewImage(event)" style="display: none;">
+      </div>
 
-<!-- 2. JavaScript भाग -->
-<script>
-  var loginF = document.getElementById("loginForm");
-  var registerF = document.getElementById("registerForm");
-  var btn = document.getElementById("btn");
+      <!-- Profile Details -->
+      <div>
+        <h3 style="margin: 0 0 5px 0; color: #222; font-size: 22px;">दलवीर सिंह</h3>
+        <p style="margin: 0; color: #ff1053; font-weight: bold; font-size: 15px;">भावी ग्राम प्रधान प्रत्याशी</p>
+        <p style="margin: 3px 0 0 0; color: #666; font-size: 14px;">📍 ग्राम पंचायत तलवार (डिबाई, बुलंदशहर)</p>
+      </div>
+    </div>
 
-  function showRegister() {
-    loginF.style.left = "-400px";
-    registerF.style.left = "30px";
-    btn.style.left = "110px";
-  }
+    <!-- Info Grid -->
+    <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+      <div style="background: #fff5f5; padding: 12px; border-radius: 8px; border-left: 4px solid #ff1053;">
+        <small style="color: #666;">संगठन पद:</small><br>
+        <strong>मुख्य संरक्षक / प्रतिनिधि</strong>
+      </div>
+      <div style="background: #fff9e6; padding: 12px; border-radius: 8px; border-left: 4px solid #ffad10;">
+        <small style="color: #666;">सदस्यता स्थिति:</small><br>
+        <strong style="color: #10b981;">✅ सक्रिय (Active Member)</strong>
+      </div>
+      <div style="background: #f0f7ff; padding: 12px; border-radius: 8px; border-left: 4px solid #007bff;">
+        <small style="color: #666;">हेल्पलाइन नंबर:</small><br>
+        <strong>+91 90277 17660</strong>
+      </div>
+    </div>
+  </section>
 
-  function showLogin() {
-    loginF.style.left = "30px";
-    registerF.style.left = "400px";
-    btn.style.left = "0px";
-  }
-</script>
+  <!-- 10. Footer -->
+  <footer style="text-align: center; padding: 25px 15px; background: #1a1a1a; color: #aaa; margin-top: 40px; font-size: 14px; line-height: 1.6;">
+    <p style="margin: 0;">© 2026 युवा शक्ति संगठन ग्राम पंचायत तलवार | सर्वाधिकार सुरक्षित।</p>
+    <p style="margin: 5px 0 0 0; font-size: 12px; color: #777;">ग्राम विकास और युवा सशक्तीकरण के लिए समर्पित।</p>
+  </footer>
+
+  <!-- JavaScript Functions -->
+  <script>
+    function showLogin() {
+      document.getElementById("loginForm").style.display = "block";
+      document.getElementById("registerForm").style.display = "none";
+    }
+    
+    function showRegister() {
+      document.getElementById("loginForm").style.display = "none";
+      document.getElementById("registerForm").style.display = "block";
+    }
+
+    function submitComplaint(e) {
+      e.preventDefault();
+      var name = document.getElementById("cName").value;
+      var phone = document.getElementById("cPhone").value;
+      var msg = document.getElementById("cMessage").value;
+
+      document.getElementById("submittedDetails").innerHTML = "<strong>नाम:</strong> " + name + " | <strong>फोन:</strong> " + phone + "<br><strong>समस्या:</strong> " + msg;
+      document.getElementById("complaintSuccess").style.display = "block";
+      document.getElementById("complaintForm").reset();
+    }
+
+    function previewImage(event) {
+      var reader = new FileReader();
+      reader.onload = function(){
+        var output = document.getElementById('profileImg');
+        output.src = reader.result;
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
+
 </body>
 </html>
